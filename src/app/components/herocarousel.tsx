@@ -148,7 +148,7 @@
 
 
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
