@@ -41,16 +41,22 @@ const Announcement = () => {
             <SheetContent>
               <SheetHeader>
                 <SheetTitle>Explore More</SheetTitle>
-                <SheetDescription>
-                  <div className="flex flex-col items-center space-y-4">
-                    {/* Add menu items if needed */}
-                  </div>
-                </SheetDescription>
+                <SheetDescription className='flex flex-col justify-left gap-4 text-black bg-slate-50 shadow-2xl'>
+                  
+                  <Link href="/categorypages/chefs " className='shadow-lg'>All Chefs</Link>
+                  <Link href="/categorypages/bakery" className='shadow-lg'>Bakery Items</Link>
+                  <Link href="/categorypages/cakes" className='shadow-lg'>Cakes</Link>
+                  <Link href="/categorypages/deserts" className='shadow-lg'>Deserts</Link>
+                  <Link href="/categorypages/fastfood" className='shadow-lg'>Fast Food</Link>
+                  <Link href="/categorypages/featured" className='shadow-lg'>Featured Products</Link>
+                  <Link href="/categorypages/nimco" className='shadow-lg'>Nimco</Link>
+                  <Link href="/categorypages/sweets" className='shadow-lg'>Sweets</Link>
+                  </SheetDescription>
               </SheetHeader>
             </SheetContent>
           </Sheet>
 
-          <LuShoppingCart />
+          <LuShoppingCart  className='max-sm:text-xl'/>
         </div>
 
         {/* Center (Logo centered only on md screens) */}
@@ -75,10 +81,17 @@ const Announcement = () => {
             <SheetContent>
               <SheetHeader>
                 <SheetTitle>Explore More</SheetTitle>
-                <SheetDescription>
-              
-                 
-                </SheetDescription>
+                <SheetDescription className='flex flex-col justify-left gap-4 text-black bg-slate-50 shadow-2xl'>
+                  
+                  <Link href="/categorypages/chefs" className='shadow-lg'>All Chefs</Link>
+                  <Link href="/categorypages/bakery" className='shadow-lg'>Bakery Items</Link>
+                  <Link href="/categorypages/cakes" className='shadow-lg'>Cakes</Link>
+                  <Link href="/categorypages/deserts" className='shadow-lg'>Deserts</Link>
+                  <Link href="/categorypages/fastfood" className='shadow-lg'>Fast Food</Link>
+                  <Link href="/categoRypages/featured" className='shadow-lg'>Featured Products</Link>
+                  <Link href="/categorypages/nimco" className='shadow-lg'>Nimco</Link>
+                  <Link href="/categorypages/sweets" className='shadow-lg'>Sweets</Link>
+                  </SheetDescription>
               </SheetHeader>
             </SheetContent>
           </Sheet>

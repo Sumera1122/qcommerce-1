@@ -154,6 +154,7 @@ import { client } from "@/sanity/lib/client";
 import { Button } from "@/components/ui/button";
 import Swal from "sweetalert2";
 import Image from "next/image";
+import Link from "next/link";
 
 
 interface Products {
@@ -209,6 +210,16 @@ const CakePage = () => {
   };
 
   return (
+    <div>
+      <div className="bg-purple-600 text-white md:flex justify-center space-x-12 h-[auto] md:h-[60px] items-center p-2 mb-20">
+  <div className="flex flex-wrap justify-center gap-4 md:gap-12">
+    <Link href="#" className="text-[14px] sm:text-[16px] font-bold">PLAIN CAKES</Link>
+    <Link href="#" className="text-[14px] sm:text-[16px] font-bold">ICE CAKES</Link>
+    <Link href="#" className="text-[14px] sm:text-[16px] font-bold">PASTRIES</Link>
+  </div>
+  </div>
+      
+
     <div className="container mx-auto px-4 py-8">
       {cakes.length === 0 ? (
         <p className="text-center text-gray-600">No featured product found</p>
@@ -225,20 +236,21 @@ const CakePage = () => {
                 <Image
                   src={cake.imageUrl}
                   alt={cake.name}
-                  width={1600} height={400}
+                  width={1600} 
+                  height={400}
                   className="w-full h-48 object-cover rounded-md mt-2"
                 />
               )}
               <h1 className="text-xl font-semibold mt-2">{cake.name}</h1>
               <p className="text-gray-600 mt-1">{cake.description}</p>
-              <p className="text-green-600 font-bold mt-1">${cake.price}</p>
+              <p className="text-green-600 font-bold mt-1">Rs{cake.price}</p>
               <p className={`mt-1 ${cake.available ? "text-green-500" : "text-red-500"}`}>
                 {cake.available ? "Available" : "Out of stock"}
               </p>
               <Button
                 className="bg-gradient-to-l from-yellow-400 to-red-400 text-black font-semibold py-2 px-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-110 transition-transform duration-200 ease-out mt-2"
                 onClick={(e) => handleAddToCart(e, cake)}
-              >
+                >
                 Add to Cart
               </Button>
             </div>
@@ -246,6 +258,7 @@ const CakePage = () => {
         </div>
       )}
     </div>
+      </div>
   );
 };
 

@@ -252,15 +252,17 @@ const DessertsPage = () => {
 
   return (
     <div>
-      <div className="md:flex justify-center space-x-6 bg-purple-600 h-[60px] items-center text-white text-center mb-16 ">
-        <Link href="#" className="text-[16px] font-bold">Rasmalai</Link>
-        <Link href="#" className="text-[16px] font-bold">Milky Cake</Link>
-        <Link href="#" className="text-[16px] font-bold">Rabri</Link>
-        <Link href="#" className="text-[16px] font-bold">Doodh Dulari</Link>
-      </div>
+      <div className="md:flex justify-center space-x-6 bg-purple-600 h-auto md:h-[60px] items-center text-white text-center mb-16 p-2 max-sm:flex-col max-sm:space-x-0 max-sm:space-y-2 max-md:flex-wrap max-md:justify-center">
+  <Link href="#" className="text-[14px] sm:text-[16px] font-bold">Rasmalai</Link>
+  <Link href="#" className="text-[14px] sm:text-[16px] font-bold">Milky Cake</Link>
+  <Link href="#" className="text-[14px] sm:text-[16px] font-bold">Rabri</Link>
+  <Link href="#" className="text-[14px] sm:text-[16px] font-bold">Doodh Dulari</Link>
+</div>
+
 
       <div className="flex justify-center items-center">
-        <Image src={'/images/desert1.webp'} alt="pic" width={1600} height={400} className="rounded shadow-lg" />
+      <Image src="/images/desert1.webp" alt="pic" width={1600} height={400} className="rounded shadow-lg" />
+
       </div>
 
       <div className="flex justify-center">
@@ -282,10 +284,13 @@ const DessertsPage = () => {
                   <Image
                     src={desertitems.imageUrl}
                     alt={desertitems.name}
+                    width={600}
+                    height={400}
                     className="w-80 h-80 object-cover rounded-lg shadow-lg"
                   />
                 )}
                 <h1 className="text-lg font-semibold mt-2">{desertitems.name}</h1>
+                <p className="text-lg font-semibold mt-2"> Rs{desertitems.price} 125g</p>
                 <p className="text-sm text-gray-600">{desertitems.description}</p>
                 <p className="text-sm text-gray-600">
                   {desertitems.available ? "Available" : "Not Available"}

@@ -266,10 +266,13 @@ const NimcoPage = () => {
                   <Image
                     src={nimcoitems.imageUrl}
                     alt={nimcoitems.name}
+                    width={1600}
+                    height={400}
                     className="w-40 h-40 object-cover rounded-lg"
                   />
                 )}
                 <h1 className="text-lg font-semibold mt-2">{nimcoitems.name}</h1>
+                <p className="text-sm text-gray-600">Rs{nimcoitems.price}</p>
                 <p className="text-sm text-gray-600">{nimcoitems.description}</p>
                 <p className="text-sm text-gray-600">
                   {nimcoitems.available ? "Available" : "Not Available"}

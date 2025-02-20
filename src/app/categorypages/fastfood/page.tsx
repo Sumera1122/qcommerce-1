@@ -153,13 +153,14 @@ const FastFood = () => {
 
   return (
     <div className="p-4">
-      <div className="md:flex justify-center space-x-6 bg-purple-600 h-[60px] items-center text-white text-center">
-        <Link href="/categorypages/fastfood" className="text-[16px] font-extrabold w-[120px] h-[40px] flex justify-center items-center p-2 rounded-lg shadow-lg">Sandwich</Link>
-        <Link href="#" className="text-[16px] font-bold">Chicken Roll</Link>
-        <Link href="#" className="text-[16px] font-bold">Samosa</Link>
-        <Link href="#" className="text-[16px] font-bold">Patties</Link>
-        <Link href="#" className="text-[16px] font-bold">Chicken Stick</Link>
-      </div>
+      <div className="flex flex-wrap justify-center gap-4 bg-purple-600 h-auto md:h-[60px] mb-4 items-center text-white text-center p-2">
+  <Link href="/categorypages/fastfood" className="text-[14px] sm:text-[16px] font-extrabold w-[100px] sm:w-[120px] h-[35px] sm:h-[40px] flex justify-center items-center p-2 rounded-lg shadow-lg">Sandwich</Link>
+  <Link href="#" className="text-[14px] sm:text-[16px] font-bold">Chicken Roll</Link>
+  <Link href="#" className="text-[14px] sm:text-[16px] font-bold">Samosa</Link>
+  <Link href="#" className="text-[14px] sm:text-[16px] font-bold">Patties</Link>
+  <Link href="#" className="text-[14px] sm:text-[16px] font-bold">Chicken Stick</Link>
+</div>
+
 
       <div className="flex justify-center items-center">
         <Image src={'/images/fastfood1.webp'} alt="pic" width={1600} height={400} className="rounded shadow-lg" />
@@ -181,6 +182,7 @@ const FastFood = () => {
               )}
               <div className="p-2">
                 <h2 className="text-lg font-semibold mt-6">{item.name}</h2>
+                <p className="text-sm text-gray-600 mt-6"> Rs{item.price}</p>
                 <p className="text-sm text-gray-600 mt-6">{item.description}</p>
                 <Button
                   className="bg-gradient-to-l from-yellow-400 to-red-400 text-black font-semibold py-2 px-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-110 transition-transform duration-200 ease-out mt-2"

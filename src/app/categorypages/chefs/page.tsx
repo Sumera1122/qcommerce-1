@@ -113,11 +113,14 @@ const Chef = () => {
 
   return (
     <div>
-      <div className=" md:flex justify-center space-x-12  bg-purple-600 h-[60px]  items-center text-white mb-20 ">
-        <Link href="#" className="text-[16px] font-bold">OUR CHEF</Link>
-        <Link href="#" className="text-[16px] font-bold">EXPERIENCE</Link>
-        <Link href="#" className="text-[16px] font-bold">SPECIALITY</Link>
-      </div>
+      <div className="bg-purple-600 text-white md:flex justify-center space-x-12 h-[auto] md:h-[60px] items-center p-2 mb-20">
+  <div className="flex flex-wrap justify-center gap-4 md:gap-12">
+    <Link href="#" className="text-[14px] sm:text-[16px] font-bold">OUR CHEF</Link>
+    <Link href="#" className="text-[14px] sm:text-[16px] font-bold">EXPERIENCE</Link>
+    <Link href="#" className="text-[14px] sm:text-[16px] font-bold">SPECIALITY</Link>
+  </div>
+</div>
+
 
       <div className="flex justify-center">
         <div className="flex flex-wrap justify-center gap-20 p-4 max-w-5xl">

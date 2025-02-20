@@ -415,10 +415,11 @@ const SweetsPage = () => {
   return (
     <div>
       <div className="md:flex justify-center space-x-6 bg-purple-600 h-[60px] items-center text-white text-center">
-        <Link href="#" className="text-[16px] font-bold">Halwa</Link>
-        <Link href="#" className="text-[16px] font-bold">Burfi</Link>
-        <Link href="#" className="text-[16px] font-bold">Mix Sweets</Link>
-        <Link href="#" className="text-[16px] font-bold">Ladu</Link>
+        <Link href="#" className="text-[16px] font-bold">HALWA</Link>
+        <Link href="#" className="text-[16px] font-bold">BURFI</Link>
+        <Link href="#" className="text-[16px] font-bold">MIX SWEETS</Link>
+        <Link href="#" className="text-[16px] font-bold">LADU</Link>
+        
       </div>
 
       <div className="flex justify-center items-center">
@@ -433,7 +434,7 @@ const SweetsPage = () => {
               {sweetfood.tag && (
                 <span className="text-sm font-semibold bg-yellow-400 p-2 rounded mb-2">{sweetfood.tag}</span>
               )}
-              <Image src={sweetfood.imageUrl} alt={sweetfood.name}  width={1600} height={400}className="w-80 h-80 object-cover rounded-lg shadow-lg" />
+              <Image src={sweetfood.imageUrl} alt={sweetfood.name}  width={1600} height={400} className="w-80 h-80 object-cover rounded-lg shadow-lg" />
               <h1 className="text-lg font-semibold mt-2">{sweetfood.name}</h1>
               <p className="text-sm text-gray-600">{sweetfood.description}</p>
               <p className="text-sm text-gray-600">{sweetfood.available ? "Available" : "Not Available"}</p>

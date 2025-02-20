@@ -323,6 +323,7 @@ const BakeryPage = () => {
                   />
                 )}
                 <h1 className="text-lg font-semibold mt-2">{item.name}</h1>
+                <p className="text-lg font-semibold mt-2">Rs{item.price} 125g</p>
                 <p className="text-sm text-gray-600">{item.description}</p>
                 <p className="text-sm text-gray-600">
                   {item.available ? "Available" : "Not Available"}
@@ -344,13 +345,13 @@ const BakeryPage = () => {
       <div className="flex justify-center gap-4 mt-8">
         <button
           onClick={handlePrevious}
-          className="bg-black w-[120px] h-[60px] p-6 rounded mb-10"
+          className="bg-black text-white w-[120px] h-[60px] p-6 rounded mb-10"
         >
           Home
         </button>
         <Button
           onClick={handleNext}
-          className="bg-black w-[120px] h-[60px] p-6 rounded mb-10 font-semibold"
+          className="bg-black text-white w-[120px] h-[60px] p-6 rounded mb-10 font-semibold"
         >
           Next
         </Button>

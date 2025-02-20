@@ -251,16 +251,19 @@ const FeaturedProducts = () => {
 
   return (
     <div>
-      <div className="md:flex justify-center space-x-12 bg-purple-600 h-[60px] items-center text-white mb-6">
-        <Link href="#" className="text-[16px] font-bold">GIFT PACK</Link>
-        <Link href="#" className="text-[16px] font-bold">GHEE</Link>
-        <Link href="#" className="text-[16px] font-bold">MAKKHAN</Link>
-        <Link href="#" className="text-[16px] font-bold">PARATHA</Link>
-        <Link href="#" className="text-[16px] font-bold">GAJAR HALWA</Link>
-      </div>
+       <div className="bg-purple-600 text-white md:flex justify-center space-x-12 h-[auto] md:h-[60px] items-center p-2 mb-20">
+  <div className="flex flex-wrap justify-center gap-4 md:gap-12">
+    <Link href="#" className="text-[14px] sm:text-[16px] font-bold">GIFT PACK</Link>
+    <Link href="#" className="text-[14px] sm:text-[16px] font-bold">PARATHA</Link>
+    <Link href="#" className="text-[14px] sm:text-[16px] font-bold">MAKHAN</Link>
+    <Link href="#" className="text-[14px] sm:text-[16px] font-bold">DESI GHEE</Link>
+    <Link href="#" className="text-[14px] sm:text-[16px] font-bold">GAJAR HALWA</Link>
+  </div>
+  </div>
 
       <div className="flex justify-center items-center">
-        <Image src={'/images/featured1.webp'} alt="pic" width={1600} height={400} className="rounded shadow-lg" />
+      <Image src="/images/featured1.webp" alt="pic" width={1600} height={400} className="rounded shadow-lg" />
+
       </div>
 
       <div className="flex justify-center">
@@ -282,11 +285,13 @@ const FeaturedProducts = () => {
                   <Image
                     src={featuredItem.imageUrl}
                     alt={featuredItem.name}
-                    width={16}
+                    width={1600}
+                    height={400}
                     className="w-80 h-80 object-cover rounded-lg shadow-lg"
                   />
                 )}
                 <h1 className="text-lg font-semibold mt-2">{featuredItem.name}</h1>
+                <p className="text-sm text-gray-600">Rs{featuredItem.price}</p>
                 <p className="text-sm text-gray-600">{featuredItem.description}</p>
                 <p className="text-sm text-gray-600">{featuredItem.available ? "Available" : "Not Available"}</p>
                 <Button

@@ -77,6 +77,7 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Swal from "sweetalert2"; // ✅ Import Swal for notifications
+import Link from "next/link";
 
 interface Products {
   tag: string;
@@ -96,7 +97,7 @@ const PackedItemsPage = () => {
     router.push("/");
   };
   const HandleNext = () => {
-    router.push("/categorypages/nextcategory"); // Change to the appropriate next category
+    router.push("/categorypages/nimco"); // Change to the appropriate next category
   };
 
   const [packedFood, setPackedFood] = useState<Products[]>([]);
@@ -139,14 +140,26 @@ const PackedItemsPage = () => {
 
   return (
     <div>
-      <div className="md:flex justify-center space-x-12 bg-purple-600 h-[60px] items-center text-white mb-6">
-        <Button className="text-[16px] font-bold" onClick={() => router.push("/categorypages/snacks")}>SNACKS</Button>
-        <Button className="text-[16px] font-bold" onClick={() => router.push("/categorypages/dairy")}>DAIRY</Button>
-        <Button className="text-[16px] font-bold" onClick={() => router.push("/categorypages/bakery")}>BAKERY</Button>
-      </div>
+      <div className="bg-purple-600 text-white md:flex justify-center space-x-12 h-[auto] md:h-[60px] items-center p-2 mb-20">
+  <div className="flex flex-wrap justify-center gap-4 md:gap-12">
+    <Link href="#" className="text-[14px] sm:text-[16px] font-bold">PLAIN CAKES</Link>
+    <Link href="#" className="text-[14px] sm:text-[16px] font-bold">ICE CAKES</Link>
+    <Link href="#" className="text-[14px] sm:text-[16px] font-bold">PASTRIES</Link>
+  </div>
+  </div>
+      
 
-      <div className="flex justify-center items-center">
-        <Image src={'/images/packeditems1.webp'} alt="pic" width={1600} height={400} className="rounded shadow-lg"/>
+<div className="flex justify-center items-center">
+     
+
+<Image 
+  src="/images/packed1.webp" 
+  alt="Packed items" 
+  width={1600} 
+  height={400} 
+  className="rounded shadow-lg"
+/>
+
       </div>
 
       <div className="flex justify-center">
@@ -174,6 +187,7 @@ const PackedItemsPage = () => {
                   />
                 )}
                 <h1 className="text-lg font-semibold mt-2">{packedItem.name}</h1>
+                <p className="text-sm text-gray-600">Rs{packedItem.price}</p>
                 <p className="text-sm text-gray-600">{packedItem.description}</p>
                 <p className="text-sm text-gray-600">
                   {packedItem.available ? "Available" : "Not Available"}
